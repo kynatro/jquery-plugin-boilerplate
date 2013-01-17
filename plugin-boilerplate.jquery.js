@@ -110,8 +110,13 @@ var BoilerPlate = function( el, params ) {
         var args = arguments_array.length > 1 ? arguments_array.slice( 1 ) : [];
         
         if( typeof( this[action] ) == 'function' ) {
+            // Execute and return the function's response
             return this[action].apply( this, args );
         } else if( typeof( this[action] ) != 'undefined' ) {
+            // Set properties
+            if( args.length > 0 ) this[action] = args[0];
+            
+            // Return property value
             return this[action];
         }
     };
