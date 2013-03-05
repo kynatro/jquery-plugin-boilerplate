@@ -49,7 +49,7 @@ var BoilerPlate = function( el, params ) {
     /**
      * Bind third-party vendor interfaces such as jQuery UI interactions
      */
-    BoilerPlate.prototype._bindInteraces = function() {
+    BoilerPlate.prototype._bindInterfaces = function() {
         // Vendor interface binding commands
     };
 
@@ -132,7 +132,7 @@ var BoilerPlate = function( el, params ) {
         this._build();
 
         // Bind interfaces (ex. jQuery UI interaction binding)
-        this._bindInteraces();
+        this._bindInterfaces();
         
         // Bind events
         this._bindEvents();
