@@ -73,7 +73,7 @@ var BoilerPlate = function( el, params ) {
      * 
      * @return {Object} Object of jQuery extended elements
      */
-    BoilerPlate._getElements = function( selectors, context ) {
+    BoilerPlate.prototype._getElements = function( selectors, context ) {
         var elements = {};
         var self = this;
         var $context = $( context || 'html' );
@@ -151,7 +151,7 @@ var BoilerPlate = function( el, params ) {
      * @return mixed
      */
     BoilerPlate.prototype.option = function( key, val ) {
-        if( val != undefined )
+        if( val !== undefined )
             this.options[key] = val;
         
         return this.options[key];
